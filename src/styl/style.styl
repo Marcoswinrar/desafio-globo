@@ -55,3 +55,26 @@ header
             &+label
                 background-position: 8px -30px
 
+.list-suggestions
+    top: 60px;
+    right: 215px
+    width: 270px
+    background: white
+    border: none
+    border-radius: 4px
+    box-shadow: 0 0 5px 3px rgba(0,0,0,.2)
+    position: absolute
+    padding-top: 5px
+    z-index: 99
+    &:before
+        position: absolute
+        width: 299px;
+        height: 23px;
+        top: -21px;
+        left: -14px;
+        content: ' ';
+        background-image: url(/img/sprite_suggest.png);
+        background-position: 0 -3px;
+        background-size: 300px 85px;
+        z-index: 10;
+
