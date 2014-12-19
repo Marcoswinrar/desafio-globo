@@ -23,6 +23,7 @@ $ npm install
 
 ### Folders and Files
 
+```g
 ├── app
 │   ├── css
 │   ├── img
@@ -40,6 +41,7 @@ gulpfile.js
 package.json
 Readme.md
 server.js
+```
 
 ### Tasks
 
