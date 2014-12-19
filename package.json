@@ -1,0 +1,25 @@
+{
+  "name": "desafio-globo",
+  "version": "1.0.0",
+  "description": "A simple live search to G1 contents.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "live",
+    "search",
+    "json",
+    "javascript",
+    "api",
+    "express"
+  ],
+  "author": "Willian Justen de Vasconcellos",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.10.0",
+    "ejs": "^1.0.0",
+    "express": "^4.10.6"
+  }
+}
