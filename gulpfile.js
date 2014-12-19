@@ -3,6 +3,7 @@ var gulp       = require('gulp'),
     gutil      = require('gulp-util'),
     uglify     = require('gulp-uglify'),
     jshint     = require('gulp-jshint'),
+    concat     = require('gulp-concat'),
     stylus     = require('gulp-stylus'),
     koutoSwiss = require('kouto-swiss'),
     prefixer   = require('autoprefixer-stylus'),
@@ -14,6 +15,7 @@ gulp.task('js', function(){
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
         .pipe(uglify())
+        .pipe(concat('app.min.js'))
         .pipe(gulp.dest('app/js/'))
 });
 
