@@ -2,6 +2,7 @@
 var gulp       = require('gulp'),
     gutil      = require('gulp-util'),
     uglify     = require('gulp-uglify'),
+    jshint     = require('gulp-jshint'),
     stylus     = require('gulp-stylus'),
     koutoSwiss = require('kouto-swiss'),
     prefixer   = require('autoprefixer-stylus'),
@@ -9,7 +10,9 @@ var gulp       = require('gulp'),
 
 // Call Uglify and Concat JS
 gulp.task('js', function(){
-    return gulp.src('src/js/script.js')
+    return gulp.src('src/js/**/*.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'))
         .pipe(uglify())
         .pipe(gulp.dest('app/js/'))
 });
