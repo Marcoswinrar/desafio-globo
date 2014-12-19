@@ -12,8 +12,6 @@ module.exports = function (app) {
     app.get('/busca/suggests?:q', function(req, res){
         var text = utils.accent_fold(req.query.q);
 
-        console.log(text);
-
         result = model.suggestions.filter(function(entry) {
             return utils.accent_fold(entry) && utils.accent_fold(entry).indexOf(text) !== -1
         });
