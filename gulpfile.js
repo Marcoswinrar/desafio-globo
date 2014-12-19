@@ -7,7 +7,8 @@ var gulp       = require('gulp'),
     stylus     = require('gulp-stylus'),
     koutoSwiss = require('kouto-swiss'),
     prefixer   = require('autoprefixer-stylus'),
-    imagemin   = require('gulp-imagemin');
+    imagemin   = require('gulp-imagemin'),
+    server     = require('gulp-express');
 
 // Call Uglify and Concat JS
 gulp.task('js', function(){
@@ -36,6 +37,12 @@ gulp.task('imagemin', function() {
         .pipe(gulp.dest('app/img'));
 });
 
+gulp.task('server', function(){
+    server.run({
+        file: 'server.js'
+    });
+})
+
 // Call Watch
 gulp.task('watch', function(){
     gulp.watch('src/styl/**/*.styl', ['stylus']);
@@ -44,4 +51,4 @@ gulp.task('watch', function(){
 });
 
 // Default task
-gulp.task('default', ['js', 'stylus', 'imagemin', 'watch']);
+gulp.task('default', ['js', 'stylus', 'imagemin', 'server', 'watch']);
